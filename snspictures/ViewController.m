@@ -1,9 +1,9 @@
 //
 //  ViewController.m
-//  iOSSamples
+//  snspictures
 //
-//  Created by Joohae Kim on 2015. 10. 4..
-//  Copyright (c) 2015년 Joohae Kim. All rights reserved.
+//  Created by Joohae Kim on 2016. 3. 10..
+//  Copyright © 2016년 Joohae Kim. All rights reserved.
 //
 
 #import "ViewController.h"
