@@ -22,10 +22,45 @@
 		F94CAE851C9251D4008CFF72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F94CAE831C9251D4008CFF72 /* LaunchScreen.storyboard */; };
 		F94CAE901C92533C008CFF72 /* RootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F94CAE8F1C92533C008CFF72 /* RootTableViewController.m */; };
 		F94CAE941C925CC7008CFF72 /* icon-sns-instagram.png in Resources */ = {isa = PBXBuildFile; fileRef = F94CAE931C925CC7008CFF72 /* icon-sns-instagram.png */; };
-		F94CAE991C925ED7008CFF72 /* SNSServices.m in Sources */ = {isa = PBXBuildFile; fileRef = F94CAE981C925ED7008CFF72 /* SNSServices.m */; };
 		F94CAE9C1C926798008CFF72 /* icon-general-exit.png in Resources */ = {isa = PBXBuildFile; fileRef = F94CAE9B1C926798008CFF72 /* icon-general-exit.png */; };
 		F94CAE9F1C92682E008CFF72 /* DisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F94CAE9E1C92682E008CFF72 /* DisplayViewController.m */; };
+		F94CAEA21C9276D5008CFF72 /* icon-sns-picasa.png in Resources */ = {isa = PBXBuildFile; fileRef = F94CAEA01C9276D5008CFF72 /* icon-sns-picasa.png */; };
+		F94CAEA31C9276D5008CFF72 /* icon-sns-flickr.png in Resources */ = {isa = PBXBuildFile; fileRef = F94CAEA11C9276D5008CFF72 /* icon-sns-flickr.png */; };
+		F94CAEB71C927DF6008CFF72 /* SNSDeviceBase.m in Sources */ = {isa = PBXBuildFile; fileRef = F94CAEB61C927DF6008CFF72 /* SNSDeviceBase.m */; };
+		F94CAEBA1C927EFC008CFF72 /* SNSServices.m in Sources */ = {isa = PBXBuildFile; fileRef = F94CAEB91C927EFC008CFF72 /* SNSServices.m */; };
+		F94CAEBB1C927F1E008CFF72 /* libsnsservice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F94CAEA81C927D87008CFF72 /* libsnsservice.a */; };
+		F94CAEBC1C927F25008CFF72 /* libsnsservice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F94CAEA81C927D87008CFF72 /* libsnsservice.a */; };
+		F9876C491C94F1DC00FF70A6 /* LeftSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9876C481C94F1DC00FF70A6 /* LeftSideMenuViewController.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F94CAEB11C927DBF008CFF72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9C8F2CA1BC1DD2500F111BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F94CAEA71C927D87008CFF72;
+			remoteInfo = snsservice;
+		};
+		F94CAEB31C927DC5008CFF72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9C8F2CA1BC1DD2500F111BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F94CAEA71C927D87008CFF72;
+			remoteInfo = snsservice;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F94CAEA61C927D87008CFF72 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F94CAE521C925184008CFF72 /* snspictures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = snspictures.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,11 +86,18 @@
 		F94CAE8E1C92533C008CFF72 /* RootTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTableViewController.h; sourceTree = "<group>"; };
 		F94CAE8F1C92533C008CFF72 /* RootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableViewController.m; sourceTree = "<group>"; };
 		F94CAE931C925CC7008CFF72 /* icon-sns-instagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-sns-instagram.png"; sourceTree = "<group>"; };
-		F94CAE971C925ED7008CFF72 /* SNSServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSServices.h; sourceTree = "<group>"; };
-		F94CAE981C925ED7008CFF72 /* SNSServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNSServices.m; sourceTree = "<group>"; };
 		F94CAE9B1C926798008CFF72 /* icon-general-exit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-general-exit.png"; sourceTree = "<group>"; };
 		F94CAE9D1C92682E008CFF72 /* DisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayViewController.h; sourceTree = "<group>"; };
 		F94CAE9E1C92682E008CFF72 /* DisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayViewController.m; sourceTree = "<group>"; };
+		F94CAEA01C9276D5008CFF72 /* icon-sns-picasa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-sns-picasa.png"; sourceTree = "<group>"; };
+		F94CAEA11C9276D5008CFF72 /* icon-sns-flickr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-sns-flickr.png"; sourceTree = "<group>"; };
+		F94CAEA81C927D87008CFF72 /* libsnsservice.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libsnsservice.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F94CAEB51C927DF6008CFF72 /* SNSDeviceBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSDeviceBase.h; sourceTree = "<group>"; };
+		F94CAEB61C927DF6008CFF72 /* SNSDeviceBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNSDeviceBase.m; sourceTree = "<group>"; };
+		F94CAEB81C927EFC008CFF72 /* SNSServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSServices.h; sourceTree = "<group>"; };
+		F94CAEB91C927EFC008CFF72 /* SNSServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNSServices.m; sourceTree = "<group>"; };
+		F9876C471C94F1DC00FF70A6 /* LeftSideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftSideMenuViewController.h; sourceTree = "<group>"; };
+		F9876C481C94F1DC00FF70A6 /* LeftSideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSideMenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,10 +105,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F94CAEBB1C927F1E008CFF72 /* libsnsservice.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F94CAE6D1C9251D4008CFF72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F94CAEBC1C927F25008CFF72 /* libsnsservice.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F94CAEA51C927D87008CFF72 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -79,13 +130,10 @@
 		F94CAE531C925184008CFF72 /* snspictures */ = {
 			isa = PBXGroup;
 			children = (
+				F94CAEBD1C9284FA008CFF72 /* UI */,
 				F94CAE571C925184008CFF72 /* AppDelegate.h */,
 				F94CAE581C925184008CFF72 /* AppDelegate.m */,
-				F94CAE5A1C925184008CFF72 /* ViewController.h */,
-				F94CAE5B1C925184008CFF72 /* ViewController.m */,
-				F94CAE5D1C925184008CFF72 /* Main.storyboard */,
 				F94CAE631C925184008CFF72 /* Assets.xcassets */,
-				F94CAE651C925184008CFF72 /* LaunchScreen.storyboard */,
 				F94CAE681C925185008CFF72 /* Info.plist */,
 				F94CAE601C925184008CFF72 /* snspictures.xcdatamodeld */,
 				F94CAE541C925184008CFF72 /* Supporting Files */,
@@ -104,8 +152,6 @@
 		F94CAE711C9251D4008CFF72 /* basetable */ = {
 			isa = PBXGroup;
 			children = (
-				F94CAE971C925ED7008CFF72 /* SNSServices.h */,
-				F94CAE981C925ED7008CFF72 /* SNSServices.m */,
 				F94CAE8A1C9251EB008CFF72 /* UI */,
 				F94CAE751C9251D4008CFF72 /* AppDelegate.h */,
 				F94CAE761C9251D4008CFF72 /* AppDelegate.m */,
@@ -128,8 +174,8 @@
 		F94CAE8A1C9251EB008CFF72 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				F94CAE8C1C9252E2008CFF72 /* ViewControllers */,
 				F94CAE8B1C92526C008CFF72 /* StoryBoards */,
+				F94CAE8C1C9252E2008CFF72 /* ViewControllers */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -166,6 +212,8 @@
 		F94CAE921C925C9F008CFF72 /* sns */ = {
 			isa = PBXGroup;
 			children = (
+				F94CAEA01C9276D5008CFF72 /* icon-sns-picasa.png */,
+				F94CAEA11C9276D5008CFF72 /* icon-sns-flickr.png */,
 				F94CAE931C925CC7008CFF72 /* icon-sns-instagram.png */,
 			);
 			path = sns;
@@ -179,12 +227,53 @@
 			path = general;
 			sourceTree = "<group>";
 		};
+		F94CAEA91C927D87008CFF72 /* snsservice */ = {
+			isa = PBXGroup;
+			children = (
+				F94CAEB81C927EFC008CFF72 /* SNSServices.h */,
+				F94CAEB91C927EFC008CFF72 /* SNSServices.m */,
+				F94CAEB51C927DF6008CFF72 /* SNSDeviceBase.h */,
+				F94CAEB61C927DF6008CFF72 /* SNSDeviceBase.m */,
+			);
+			path = snsservice;
+			sourceTree = "<group>";
+		};
+		F94CAEBD1C9284FA008CFF72 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F94CAEBE1C928506008CFF72 /* StoryBoards */,
+				F94CAEBF1C928519008CFF72 /* ViewControllers */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		F94CAEBE1C928506008CFF72 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				F94CAE5D1C925184008CFF72 /* Main.storyboard */,
+				F94CAE651C925184008CFF72 /* LaunchScreen.storyboard */,
+			);
+			name = StoryBoards;
+			sourceTree = "<group>";
+		};
+		F94CAEBF1C928519008CFF72 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F94CAE5A1C925184008CFF72 /* ViewController.h */,
+				F94CAE5B1C925184008CFF72 /* ViewController.m */,
+				F9876C471C94F1DC00FF70A6 /* LeftSideMenuViewController.h */,
+				F9876C481C94F1DC00FF70A6 /* LeftSideMenuViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		F9C8F2C91BC1DD2500F111BB = {
 			isa = PBXGroup;
 			children = (
-				F94CAE911C925C9F008CFF72 /* images */,
-				F94CAE531C925184008CFF72 /* snspictures */,
+				F94CAEA91C927D87008CFF72 /* snsservice */,
 				F94CAE711C9251D4008CFF72 /* basetable */,
+				F94CAE531C925184008CFF72 /* snspictures */,
+				F94CAE911C925C9F008CFF72 /* images */,
 				F9C8F2D31BC1DD2500F111BB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -194,6 +283,7 @@
 			children = (
 				F94CAE521C925184008CFF72 /* snspictures.app */,
 				F94CAE701C9251D4008CFF72 /* basetable.app */,
+				F94CAEA81C927D87008CFF72 /* libsnsservice.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -212,6 +302,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				F94CAEB21C927DBF008CFF72 /* PBXTargetDependency */,
 			);
 			name = snspictures;
 			productName = snspictures;
@@ -229,11 +320,29 @@
 			buildRules = (
 			);
 			dependencies = (
+				F94CAEB41C927DC5008CFF72 /* PBXTargetDependency */,
 			);
 			name = basetable;
 			productName = basetable;
 			productReference = F94CAE701C9251D4008CFF72 /* basetable.app */;
 			productType = "com.apple.product-type.application";
+		};
+		F94CAEA71C927D87008CFF72 /* snsservice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F94CAEAE1C927D87008CFF72 /* Build configuration list for PBXNativeTarget "snsservice" */;
+			buildPhases = (
+				F94CAEA41C927D87008CFF72 /* Sources */,
+				F94CAEA51C927D87008CFF72 /* Frameworks */,
+				F94CAEA61C927D87008CFF72 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = snsservice;
+			productName = snsservice;
+			productReference = F94CAEA81C927D87008CFF72 /* libsnsservice.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -248,6 +357,9 @@
 						CreatedOnToolsVersion = 7.2;
 					};
 					F94CAE6F1C9251D4008CFF72 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					F94CAEA71C927D87008CFF72 = {
 						CreatedOnToolsVersion = 7.2;
 					};
 				};
@@ -267,6 +379,7 @@
 			targets = (
 				F94CAE511C925184008CFF72 /* snspictures */,
 				F94CAE6F1C9251D4008CFF72 /* basetable */,
+				F94CAEA71C927D87008CFF72 /* snsservice */,
 			);
 		};
 /* End PBXProject section */
@@ -286,8 +399,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F94CAEA21C9276D5008CFF72 /* icon-sns-picasa.png in Resources */,
 				F94CAE851C9251D4008CFF72 /* LaunchScreen.storyboard in Resources */,
 				F94CAE821C9251D4008CFF72 /* Assets.xcassets in Resources */,
+				F94CAEA31C9276D5008CFF72 /* icon-sns-flickr.png in Resources */,
 				F94CAE9C1C926798008CFF72 /* icon-general-exit.png in Resources */,
 				F94CAE941C925CC7008CFF72 /* icon-sns-instagram.png in Resources */,
 				F94CAE7D1C9251D4008CFF72 /* Main.storyboard in Resources */,
@@ -302,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F94CAE5C1C925184008CFF72 /* ViewController.m in Sources */,
+				F9876C491C94F1DC00FF70A6 /* LeftSideMenuViewController.m in Sources */,
 				F94CAE591C925184008CFF72 /* AppDelegate.m in Sources */,
 				F94CAE561C925184008CFF72 /* main.m in Sources */,
 				F94CAE621C925184008CFF72 /* snspictures.xcdatamodeld in Sources */,
@@ -316,12 +432,33 @@
 				F94CAE9F1C92682E008CFF72 /* DisplayViewController.m in Sources */,
 				F94CAE771C9251D4008CFF72 /* AppDelegate.m in Sources */,
 				F94CAE741C9251D4008CFF72 /* main.m in Sources */,
-				F94CAE991C925ED7008CFF72 /* SNSServices.m in Sources */,
 				F94CAE901C92533C008CFF72 /* RootTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F94CAEA41C927D87008CFF72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F94CAEBA1C927EFC008CFF72 /* SNSServices.m in Sources */,
+				F94CAEB71C927DF6008CFF72 /* SNSDeviceBase.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F94CAEB21C927DBF008CFF72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F94CAEA71C927D87008CFF72 /* snsservice */;
+			targetProxy = F94CAEB11C927DBF008CFF72 /* PBXContainerItemProxy */;
+		};
+		F94CAEB41C927DC5008CFF72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F94CAEA71C927D87008CFF72 /* snsservice */;
+			targetProxy = F94CAEB31C927DC5008CFF72 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F94CAE5D1C925184008CFF72 /* Main.storyboard */ = {
@@ -366,7 +503,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = snspictures/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.carrotbooks.snspictures;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -378,7 +515,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = snspictures/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.carrotbooks.snspictures;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -408,6 +545,28 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.carrotbooks.basetable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F94CAEAF1C927D87008CFF72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F94CAEB01C927D87008CFF72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -503,6 +662,7 @@
 				F94CAE6B1C925185008CFF72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F94CAE871C9251D4008CFF72 /* Build configuration list for PBXNativeTarget "basetable" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +671,16 @@
 				F94CAE891C9251D4008CFF72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F94CAEAE1C927D87008CFF72 /* Build configuration list for PBXNativeTarget "snsservice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F94CAEAF1C927D87008CFF72 /* Debug */,
+				F94CAEB01C927D87008CFF72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F9C8F2CD1BC1DD2500F111BB /* Build configuration list for PBXProject "iOSSamples" */ = {
 			isa = XCConfigurationList;

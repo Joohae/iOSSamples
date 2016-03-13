@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIView *webViewContainer;
+@property (weak, nonatomic) IBOutlet UIView *sideMenuContainer;
 
 @end
 
