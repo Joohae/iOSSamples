@@ -55,10 +55,10 @@
     fade.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     
     CABasicAnimation *move = [CABasicAnimation animationWithKeyPath:@"transform.translation.y"];
-    move.fromValue = @(_imageCat.frame.origin.y);
+    move.fromValue = @(_imageCat.bounds.origin.y);  // Check the note above
     move.toValue = @(self.view.bounds.size.height);
     move.duration = 3.0f;
-    move.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    move.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     move.removedOnCompletion = NO;
     move.fillMode = kCAFillModeForwards;
     move.delegate = self;
@@ -86,7 +86,22 @@
 
 #pragma mark - AnimateWithDuration
 - (IBAction)didClickedAnimatedWithDuration:(id)sender {
+    CGRect newFrame = _imageCat.frame;
+    CGRect oldFrame = _imageCat.frame;
+    newFrame.origin.y = self.view.bounds.size.height;
     
+    [UIView animateWithDuration:3.0f
+                          delay:0.0f
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         NSLog(@"Animations");
+                         _imageCat.alpha = 0.0f;
+                         _imageCat.frame = newFrame;
+                     } completion:^(BOOL finished) {
+                         NSLog(@"Animation did completed");
+                         _imageCat.alpha = 1.0f;
+                         _imageCat.frame = oldFrame;
+                     }];
 }
 
 
