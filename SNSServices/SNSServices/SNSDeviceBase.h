@@ -7,7 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SNSServiceDelegate.h"
+
+typedef NS_ENUM(NSInteger, SNSSErviceError) {
+    SNSServiceErrorOkay,                // No error
+    SNSSErviceErrorUnimplemented        // Unimplemented method error
+};
 
 @interface SNSDeviceBase : NSObject
+
+@property (nonatomic,weak) id<SNSServiceDelegate> delegate;
+
+/*!
+ Request request media file list to SNSService
+ */
+- (void) requestFileList;
 
 @end
