@@ -17,5 +17,10 @@ FOUNDATION_EXPORT const unsigned char SNSServicesVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <SNSServices/PublicHeader.h>
 
 #import <SNSServices/SNSServiceManager.h>
-#import <SNSSErvices/SNSDeviceBase.h>
+#import <SNSServices/SNSServiceDelegate.h>
+
+#import <SNSServices/SNSDeviceBase.h>
+#import <SNSServices/SNSDeviceInstagram.h>
+
 #import <SNSServices/AuthenticationWebViewController.h>
+#import <SNSServices/AuthenticationWVCInstagram.h>

@@ -15,6 +15,11 @@
 		F9D1429E1C9624EB002ADD92 /* AuthenticationWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9D1429B1C9624EB002ADD92 /* AuthenticationWebViewController.xib */; };
 		F9D142A81C962800002ADD92 /* SNSServiceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F9D142A61C962800002ADD92 /* SNSServiceManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F9D142A91C962800002ADD92 /* SNSServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D142A71C962800002ADD92 /* SNSServiceManager.m */; };
+		F9D142C41C965B35002ADD92 /* SNSDeviceInstagram.h in Headers */ = {isa = PBXBuildFile; fileRef = F9D142C21C965B35002ADD92 /* SNSDeviceInstagram.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9D142C51C965B35002ADD92 /* SNSDeviceInstagram.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D142C31C965B35002ADD92 /* SNSDeviceInstagram.m */; };
+		F9D142C91C965B83002ADD92 /* AuthenticationWVCInstagram.h in Headers */ = {isa = PBXBuildFile; fileRef = F9D142C71C965B83002ADD92 /* AuthenticationWVCInstagram.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9D142CA1C965B83002ADD92 /* AuthenticationWVCInstagram.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D142C81C965B83002ADD92 /* AuthenticationWVCInstagram.m */; };
+		F9D142D71C967C0B002ADD92 /* SNSServiceDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = F9D142D61C967B8A002ADD92 /* SNSServiceDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		F9D1429B1C9624EB002ADD92 /* AuthenticationWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuthenticationWebViewController.xib; sourceTree = "<group>"; };
 		F9D142A61C962800002ADD92 /* SNSServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSServiceManager.h; sourceTree = "<group>"; };
 		F9D142A71C962800002ADD92 /* SNSServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNSServiceManager.m; sourceTree = "<group>"; };
+		F9D142C21C965B35002ADD92 /* SNSDeviceInstagram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSDeviceInstagram.h; sourceTree = "<group>"; };
+		F9D142C31C965B35002ADD92 /* SNSDeviceInstagram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNSDeviceInstagram.m; sourceTree = "<group>"; };
+		F9D142C71C965B83002ADD92 /* AuthenticationWVCInstagram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationWVCInstagram.h; sourceTree = "<group>"; };
+		F9D142C81C965B83002ADD92 /* AuthenticationWVCInstagram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthenticationWVCInstagram.m; sourceTree = "<group>"; };
+		F9D142D61C967B8A002ADD92 /* SNSServiceDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNSServiceDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,25 +70,38 @@
 		F9D1427D1C96230C002ADD92 /* SNSServices */ = {
 			isa = PBXGroup;
 			children = (
-				F9D1429F1C9624F1002ADD92 /* UI */,
 				F9D1427E1C96230C002ADD92 /* SNSServices.h */,
+				F9D142D61C967B8A002ADD92 /* SNSServiceDelegate.h */,
 				F9D142A61C962800002ADD92 /* SNSServiceManager.h */,
 				F9D142A71C962800002ADD92 /* SNSServiceManager.m */,
-				F9D1428E1C962331002ADD92 /* SNSDeviceBase.h */,
-				F9D1428F1C962331002ADD92 /* SNSDeviceBase.m */,
+				F9D142CB1C965B94002ADD92 /* SNSDevices */,
+				F9D142C61C965B3F002ADD92 /* Authentications */,
 				F9D142801C96230C002ADD92 /* Info.plist */,
 			);
 			path = SNSServices;
 			sourceTree = "<group>";
 		};
-		F9D1429F1C9624F1002ADD92 /* UI */ = {
+		F9D142C61C965B3F002ADD92 /* Authentications */ = {
 			isa = PBXGroup;
 			children = (
 				F9D142991C9624EB002ADD92 /* AuthenticationWebViewController.h */,
 				F9D1429A1C9624EB002ADD92 /* AuthenticationWebViewController.m */,
 				F9D1429B1C9624EB002ADD92 /* AuthenticationWebViewController.xib */,
+				F9D142C71C965B83002ADD92 /* AuthenticationWVCInstagram.h */,
+				F9D142C81C965B83002ADD92 /* AuthenticationWVCInstagram.m */,
 			);
-			name = UI;
+			name = Authentications;
+			sourceTree = "<group>";
+		};
+		F9D142CB1C965B94002ADD92 /* SNSDevices */ = {
+			isa = PBXGroup;
+			children = (
+				F9D1428E1C962331002ADD92 /* SNSDeviceBase.h */,
+				F9D1428F1C962331002ADD92 /* SNSDeviceBase.m */,
+				F9D142C21C965B35002ADD92 /* SNSDeviceInstagram.h */,
+				F9D142C31C965B35002ADD92 /* SNSDeviceInstagram.m */,
+			);
+			name = SNSDevices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,8 +113,11 @@
 			files = (
 				F9D1427F1C96230C002ADD92 /* SNSServices.h in Headers */,
 				F9D142A81C962800002ADD92 /* SNSServiceManager.h in Headers */,
-				F9D1429C1C9624EB002ADD92 /* AuthenticationWebViewController.h in Headers */,
+				F9D142D71C967C0B002ADD92 /* SNSServiceDelegate.h in Headers */,
 				F9D142911C962331002ADD92 /* SNSDeviceBase.h in Headers */,
+				F9D142C41C965B35002ADD92 /* SNSDeviceInstagram.h in Headers */,
+				F9D1429C1C9624EB002ADD92 /* AuthenticationWebViewController.h in Headers */,
+				F9D142C91C965B83002ADD92 /* AuthenticationWVCInstagram.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +190,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9D142CA1C965B83002ADD92 /* AuthenticationWVCInstagram.m in Sources */,
 				F9D1429D1C9624EB002ADD92 /* AuthenticationWebViewController.m in Sources */,
+				F9D142C51C965B35002ADD92 /* SNSDeviceInstagram.m in Sources */,
 				F9D142A91C962800002ADD92 /* SNSServiceManager.m in Sources */,
 				F9D142921C962331002ADD92 /* SNSDeviceBase.m in Sources */,
 			);
@@ -316,6 +344,7 @@
 				F9D142851C96230C002ADD92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
