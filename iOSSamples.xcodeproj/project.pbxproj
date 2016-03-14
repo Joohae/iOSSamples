@@ -27,8 +27,7 @@
 		F94CAEA21C9276D5008CFF72 /* icon-sns-picasa.png in Resources */ = {isa = PBXBuildFile; fileRef = F94CAEA01C9276D5008CFF72 /* icon-sns-picasa.png */; };
 		F94CAEA31C9276D5008CFF72 /* icon-sns-flickr.png in Resources */ = {isa = PBXBuildFile; fileRef = F94CAEA11C9276D5008CFF72 /* icon-sns-flickr.png */; };
 		F9876C491C94F1DC00FF70A6 /* LeftSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9876C481C94F1DC00FF70A6 /* LeftSideMenuViewController.m */; };
-		F9D142C01C962E46002ADD92 /* SNSServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D142BF1C962E46002ADD92 /* SNSServices.framework */; };
-		F9D142C11C962E4D002ADD92 /* SNSServices.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9D142BF1C962E46002ADD92 /* SNSServices.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F9D142D11C9667B9002ADD92 /* SNSServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D142D01C9667B9002ADD92 /* SNSServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,7 +37,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F9D142C11C962E4D002ADD92 /* SNSServices.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 1;
@@ -76,7 +74,7 @@
 		F94CAEA11C9276D5008CFF72 /* icon-sns-flickr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-sns-flickr.png"; sourceTree = "<group>"; };
 		F9876C471C94F1DC00FF70A6 /* LeftSideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftSideMenuViewController.h; sourceTree = "<group>"; };
 		F9876C481C94F1DC00FF70A6 /* LeftSideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSideMenuViewController.m; sourceTree = "<group>"; };
-		F9D142BF1C962E46002ADD92 /* SNSServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SNSServices.framework; path = "SNSServices/build/Debug-iphoneos/SNSServices.framework"; sourceTree = "<group>"; };
+		F9D142D01C9667B9002ADD92 /* SNSServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SNSServices.framework; path = "../SNSServices/build/Debug-iphoneos/SNSServices.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9D142C01C962E46002ADD92 /* SNSServices.framework in Frameworks */,
+				F9D142D11C9667B9002ADD92 /* SNSServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +121,7 @@
 		F94CAE711C9251D4008CFF72 /* basetable */ = {
 			isa = PBXGroup;
 			children = (
+				F9D142D01C9667B9002ADD92 /* SNSServices.framework */,
 				F94CAE8A1C9251EB008CFF72 /* UI */,
 				F94CAE751C9251D4008CFF72 /* AppDelegate.h */,
 				F94CAE761C9251D4008CFF72 /* AppDelegate.m */,
@@ -230,7 +229,6 @@
 		F9C8F2C91BC1DD2500F111BB = {
 			isa = PBXGroup;
 			children = (
-				F9D142BF1C962E46002ADD92 /* SNSServices.framework */,
 				F94CAE711C9251D4008CFF72 /* basetable */,
 				F94CAE531C925184008CFF72 /* snspictures */,
 				F94CAE911C925C9F008CFF72 /* images */,
@@ -291,7 +289,7 @@
 		F9C8F2CA1BC1DD2500F111BB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Joohae Kim";
 				TargetAttributes = {
 					F94CAE511C925184008CFF72 = {
@@ -509,6 +507,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
