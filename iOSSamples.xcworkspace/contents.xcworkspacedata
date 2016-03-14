@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:SNSServices/SNSServices.xcodeproj">
+      location = "group:iOSSamples.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:iOSSamples.xcodeproj">
+      location = "group:SNSServices/SNSServices.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:animation/uiview/animatioin.uiview/animatioin.uiview.xcodeproj">
