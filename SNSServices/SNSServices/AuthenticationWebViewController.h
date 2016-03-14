@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface AuthenticationWebViewController : UIViewController
+
 @property (unsafe_unretained, nonatomic) IBOutlet UIWebView *webView;
+@property (nonatomic) NSString *targetURL;
+
 
 @end

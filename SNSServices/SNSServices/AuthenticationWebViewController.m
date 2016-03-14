@@ -16,8 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if (!_targetURL) {
+        _targetURL = @"https://google.com";
+    }
     // Do any additional setup after loading the view from its nib.
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://google.com"]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:_targetURL]];
     [_webView loadRequest:request];
 }
 
