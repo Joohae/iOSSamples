@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SNSServices/SNSServiceDelegate.h>
 
-@interface DisplayViewController : UIViewController
+@interface DisplayViewController : UIViewController <SNSServiceDelegate>
 
 // Segue parameters
 @property (strong, nonatomic) NSString *message;
