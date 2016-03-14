@@ -1,8 +1,8 @@
 //
-//  SNSServices.h
-//  iOSSamples
+//  SNSServiceManager.h
+//  SNSServices
 //
-//  Created by Joohae Kim on 2016. 3. 10..
+//  Created by Joohae Kim on 2016. 3. 13..
 //  Copyright © 2016년 Joohae Kim. All rights reserved.
 //
 
@@ -19,7 +19,7 @@ typedef NS_ENUM(NSInteger, SNSServicesType) {
     SNSServiceFacebook
 };
 
-@interface SNSServices : NSObject
+@interface SNSServiceManager : NSObject
 
 +(NSInteger)numberOfServices;
 +(NSDictionary *)getServiceAt:(NSInteger)index;

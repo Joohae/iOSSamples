@@ -6,7 +6,7 @@
 //  Copyright © 2016년 Joohae Kim. All rights reserved.
 //
 
-#import "SNSServices.h"
+#import <SNSServices/SNSServiceManager.h>
 
 #import "RootTableViewController.h"
 #import "DisplayViewController.h"
@@ -42,16 +42,17 @@ const NSString *kSecondSectionCell = @"SECOND_SECTION_CELL";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return SNSServices.numberOfServices;
+    return SNSServiceManager.numberOfServices;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:(NSString *_Nonnull)kMainTableCell forIndexPath:indexPath];
-    
-    NSDictionary *snsService = [SNSServices getServiceAt:indexPath.row];
+
+    NSDictionary *snsService = [SNSServiceManager getServiceAt:indexPath.row];
     [cell.textLabel setText:snsService[SNSServiceTitle]];
     [cell.detailTextLabel setText:snsService[SNSServiceDescription]];
     [cell.imageView setImage:[UIImage imageNamed:snsService[SNSServiceIcon]]];
+    
     return cell;
 }
 

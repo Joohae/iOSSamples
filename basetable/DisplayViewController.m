@@ -7,6 +7,7 @@
 //
 
 #import "DisplayViewController.h"
+#import <SNSServices/AuthenticationWebViewController.h>
 
 @interface DisplayViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *passedMessage;
@@ -20,6 +21,17 @@
     // Do any additional setup after loading the view.
     
     [_passedMessage setText:_message];
+    
+    NSString *frameworkBundleID = @"kr.carrotbooks.SNSServices";
+    NSBundle *frameworkBundle = [NSBundle bundleWithIdentifier:frameworkBundleID];
+
+    AuthenticationWebViewController *awvc;
+    awvc = [[AuthenticationWebViewController alloc] initWithNibName:@"AuthenticationWebViewController"
+                                                             bundle:frameworkBundle];
+    [self addChildViewController:awvc];
+    awvc.view.frame = self.view.frame;
+    [self.view addSubview:awvc.view];
+    [awvc didMoveToParentViewController:self];
 }
 
 -(void)viewDidAppear:(BOOL)animated {

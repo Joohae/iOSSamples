@@ -1,29 +1,27 @@
 //
-//  SNSServices.m
-//  iOSSamples
+//  SNSServiceManager.m
+//  SNSServices
 //
-//  Created by Joohae Kim on 2016. 3. 10..
+//  Created by Joohae Kim on 2016. 3. 13..
 //  Copyright © 2016년 Joohae Kim. All rights reserved.
 //
 
-#import "SNSServices.h"
+#import "SNSServiceManager.h"
 
-@interface SNSServices()
+@interface SNSServiceManager()
 {
     NSDictionary *_services;
     NSArray      *_serviceKeys;
 }
-
 @end
 
-@implementation SNSServices
-
+@implementation SNSServiceManager
 +(NSInteger)numberOfServices {
-    return SNSServices.sharedManager.numberOfServices;
+    return SNSServiceManager.sharedManager.numberOfServices;
 }
 
 +(NSDictionary *)getServiceAt:(NSInteger)index {
-    return [SNSServices.sharedManager getServiceAt:index];
+    return [SNSServiceManager.sharedManager getServiceAt:index];
 }
 
 #pragma mark - Sub-methods
@@ -50,8 +48,8 @@
                                                  SNSServiceIcon: @"icon-sns-picasa.png",
                                                  SNSServiceDescription: @"Picasa description" },
                       /*@(SNSServiceFacebook) : @{ SNSServiceTitle: @"Facebook",
-                                                 SNSServiceIcon: @"icon-sns-facebook.png",
-                                                 SNSServiceDescription: @"Facebook description" }*/
+                       SNSServiceIcon: @"icon-sns-facebook.png",
+                       SNSServiceDescription: @"Facebook description" }*/
                       };
         _serviceKeys = [_services allKeys];
     };
@@ -59,8 +57,8 @@
     return self;
 }
 
-+(SNSServices *)sharedManager {
-    static SNSServices *instance = nil;
++(SNSServiceManager *)sharedManager {
+    static SNSServiceManager *instance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         instance = [[self alloc] init];
@@ -68,5 +66,4 @@
     
     return instance;
 }
-
 @end
