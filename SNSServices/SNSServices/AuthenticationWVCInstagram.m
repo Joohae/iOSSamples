@@ -19,7 +19,10 @@
 @implementation AuthenticationWVCInstagram
 
 - (void)viewDidLoad {
-    self.targetURL = @"https://www.instagram.com";
+    NSString *scopeStr = @"scope=basic+likes+comments+relationships";
+    self.targetURL = [NSString stringWithFormat:@"https://api.instagram.com/oauth/authorize/?client_id=%@&display=touch&%@&redirect_uri=%@&response_type=token",
+                     _clientId, scopeStr, _callbackBase];
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
@@ -33,9 +36,55 @@
 - (void) setClinetID:(NSString *)clientId
               secret:(NSString *)clientSecret
      andCallbackBase:(NSString *)callbackBase {
+    
     _clientId = clientId;
     _clientSecret = clientSecret;
     _callbackBase = callbackBase;
 }
 
+#pragma mark - UIWebView Delegate override
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    [self.webView stopLoading];
+    
+    if([error code] == -1009)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Cannot open the page because it is not connected to the Internet." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+        [self.delegate authenticationFailure:error];
+    }
+}
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    NSString *responseURL = [request.URL absoluteString];
+    
+    NSString *urlCallbackPrefix = [NSString stringWithFormat:@"%@/#access_token=", _callbackBase];
+    
+    if([responseURL hasPrefix:urlCallbackPrefix])
+    {
+        NSString* pattern = [NSString stringWithFormat:@"%@/", _callbackBase];
+        NSString* urlString = [[request URL] absoluteString];
+        NSArray * UrlParts = [urlString componentsSeparatedByString:pattern];
+        urlString = [UrlParts objectAtIndex:1];
+        
+        NSRange accessToken = [urlString rangeOfString: @"#access_token="];
+        if (accessToken.location != NSNotFound) {
+            NSString* strAccessToken = [urlString substringFromIndex: NSMaxRange(accessToken)];
+            NSDictionary *response = @{
+                                       @"ACCESS_TOKEN": strAccessToken
+                                       };
+            if (!self.delegate || ![self.delegate respondsToSelector:@selector(authenticationSuccess:)]) {
+                @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                               reason:@"delegate authenticationSuccess not implemented"
+                                             userInfo:nil];
+                return NO;
+            }
+            
+            [self.delegate authenticationSuccess:response];
+            return NO;
+        }
+    }
+    return YES;
+}
 @end

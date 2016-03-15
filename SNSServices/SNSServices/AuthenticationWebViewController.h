@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AuthenticationDelegate.h"
 
-@interface AuthenticationWebViewController : UIViewController
+@interface AuthenticationWebViewController : UIViewController <AuthenticationDelegate, UIWebViewDelegate>
 
+@property (nonatomic) id<AuthenticationDelegate> delegate;
 @property (unsafe_unretained, nonatomic) IBOutlet UIWebView *webView;
 @property (nonatomic) NSString *targetURL;
-
 
 @end

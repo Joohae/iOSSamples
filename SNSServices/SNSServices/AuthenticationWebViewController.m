@@ -21,6 +21,7 @@
     }
     // Do any additional setup after loading the view from its nib.
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:_targetURL]];
+    _webView.delegate = self;
     [_webView loadRequest:request];
 }
 
@@ -38,5 +39,31 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(void) authenticationSuccess:(NSDictionary *)response {
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                   reason:@"Method authenticationSuccess is not implemented"
+                                 userInfo:nil];
+}
+
+-(void) authenticationFailure:(NSError *)error {
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                   reason:@"Method authenticationSuccess is not implemented"
+                                 userInfo:nil];
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                   reason:@"Method authenticationSuccess is not implemented"
+                                 userInfo:nil];
+}
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                   reason:@"Method authenticationSuccess is not implemented"
+                                 userInfo:nil];
+}
 
 @end

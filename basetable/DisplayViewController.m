@@ -31,25 +31,6 @@
     [instagram setClinetID:INSTAGRAM_CLIENT_ID secret:INSTAGRAM_CLIENT_SECRET andCallbackBase:INSTAGRAM_REDIRECT_URL];
     [instagram setDelegate:self];
     [instagram requestFileList];
-    
-    /*
-     NSString *frameworkBundleID = @"kr.carrotbooks.SNSServices";
-     NSBundle *frameworkBundle = [NSBundle bundleWithIdentifier:frameworkBundleID];
-    
-    AuthenticationWVCInstagram *awvc;
-    awvc = [[AuthenticationWVCInstagram alloc] initWithNibName:@"AuthenticationWebViewController"
-                                                             bundle:frameworkBundle];
-    [self addChildViewController:awvc];
-    CGRect webFrame = self.view.frame;
-    webFrame.origin.y = (self.view.frame.size.height - 800) / 2;
-    webFrame.origin.x = (self.view.frame.size.width - 600) / 2;
-    webFrame.size.width = 600;
-    webFrame.size.height = 800;
-    awvc.view.frame = webFrame;
-    
-    [self.view addSubview:awvc.view];
-    [awvc didMoveToParentViewController:self];
-     */
 }
 
 -(void)viewDidAppear:(BOOL)animated {

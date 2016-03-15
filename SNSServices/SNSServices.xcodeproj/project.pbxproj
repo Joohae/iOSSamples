@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F90205D41C97AF1300D34B16 /* AuthenticationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = F90205D31C97AE0800D34B16 /* AuthenticationDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F9D1427F1C96230C002ADD92 /* SNSServices.h in Headers */ = {isa = PBXBuildFile; fileRef = F9D1427E1C96230C002ADD92 /* SNSServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F9D142911C962331002ADD92 /* SNSDeviceBase.h in Headers */ = {isa = PBXBuildFile; fileRef = F9D1428E1C962331002ADD92 /* SNSDeviceBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F9D142921C962331002ADD92 /* SNSDeviceBase.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D1428F1C962331002ADD92 /* SNSDeviceBase.m */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F90205D31C97AE0800D34B16 /* AuthenticationDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthenticationDelegate.h; sourceTree = "<group>"; };
 		F9D1427B1C96230C002ADD92 /* SNSServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SNSServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D1427E1C96230C002ADD92 /* SNSServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNSServices.h; sourceTree = "<group>"; };
 		F9D142801C96230C002ADD92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		F9D142C61C965B3F002ADD92 /* Authentications */ = {
 			isa = PBXGroup;
 			children = (
+				F90205D31C97AE0800D34B16 /* AuthenticationDelegate.h */,
 				F9D142991C9624EB002ADD92 /* AuthenticationWebViewController.h */,
 				F9D1429A1C9624EB002ADD92 /* AuthenticationWebViewController.m */,
 				F9D1429B1C9624EB002ADD92 /* AuthenticationWebViewController.xib */,
@@ -118,6 +121,7 @@
 				F9D142C41C965B35002ADD92 /* SNSDeviceInstagram.h in Headers */,
 				F9D1429C1C9624EB002ADD92 /* AuthenticationWebViewController.h in Headers */,
 				F9D142C91C965B83002ADD92 /* AuthenticationWVCInstagram.h in Headers */,
+				F90205D41C97AF1300D34B16 /* AuthenticationDelegate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

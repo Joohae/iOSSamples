@@ -7,8 +7,9 @@
 //
 
 #import <SNSServices/SNSServices.h>
+#import "AuthenticationDelegate.h"
 
-@interface SNSDeviceInstagram : SNSDeviceBase
+@interface SNSDeviceInstagram : SNSDeviceBase <AuthenticationDelegate>
 
 /*!
  Set parameters to authenticate Instagram.
