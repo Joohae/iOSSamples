@@ -59,9 +59,7 @@
 {
     NSString *responseURL = [request.URL absoluteString];
     
-    NSString *urlCallbackPrefix = [NSString stringWithFormat:@"%@/#access_token=", _callbackBase];
-    
-    if([responseURL hasPrefix:urlCallbackPrefix])
+    if([responseURL hasPrefix:_callbackBase])
     {
         NSString* pattern = [NSString stringWithFormat:@"%@/", _callbackBase];
         NSString* urlString = [[request URL] absoluteString];
@@ -83,6 +81,21 @@
             
             [self.delegate authenticationSuccess:response];
             return NO;
+        } else {
+            NSString *responseQuery = [[urlString componentsSeparatedByString:@"?"] objectAtIndex:1];
+            NSMutableDictionary *userInfo = [NSMutableDictionary new];
+            for (NSString *anItem in [responseQuery componentsSeparatedByString:@"&"]) {
+                NSArray *keyValue = [anItem componentsSeparatedByString:@"="];
+                [userInfo setValue:keyValue[1] forKey:keyValue[0]];
+            }
+            
+            NSError *error;
+            error = [NSError errorWithDomain:@"kr.carrotbooks.SNSServices"
+                                        code:NSURLErrorBadServerResponse
+                                    userInfo:userInfo];
+            if (self.delegate && [self.delegate respondsToSelector:@selector(authenticationFailure:)]) {
+                [self.delegate authenticationFailure:error];
+            }
         }
     }
     return YES;
