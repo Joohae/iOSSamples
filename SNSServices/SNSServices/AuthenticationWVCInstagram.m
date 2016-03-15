@@ -90,6 +90,10 @@
             }
             
             NSError *error;
+            if ([userInfo valueForKey:@"error_description"]) {
+                [userInfo setObject:[userInfo valueForKey:@"error_description"]
+                             forKey:NSLocalizedDescriptionKey];
+            }
             error = [NSError errorWithDomain:@"kr.carrotbooks.SNSServices"
                                         code:NSURLErrorBadServerResponse
                                     userInfo:userInfo];
