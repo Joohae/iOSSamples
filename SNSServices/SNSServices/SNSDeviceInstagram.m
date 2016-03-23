@@ -60,12 +60,7 @@
     [_webviewController setClinetID:_clientId secret:_clientSecret andCallbackBase:_callbackBase];
     
     [parentVC addChildViewController:_webviewController];
-    CGRect webFrame = parentVC.view.frame;
-    webFrame.origin.y = (parentVC.view.frame.size.height - 800) / 2;
-    webFrame.origin.x = (parentVC.view.frame.size.width - 600) / 2;
-    webFrame.size.width = 600;
-    webFrame.size.height = 800;
-    _webviewController.view.frame = webFrame;
+    _webviewController.view.frame = parentVC.view.frame;
 
     [parentVC.view addSubview:_webviewController.view];
     [_webviewController didMoveToParentViewController:parentVC];
