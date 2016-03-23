@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0759205876F67D4A5E9AAD6A /* libPods-SNSServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85117C8E515E48F88B413182 /* libPods-SNSServices.a */; };
 		F90205D41C97AF1300D34B16 /* AuthenticationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = F90205D31C97AE0800D34B16 /* AuthenticationDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F970967B1CA2803600616E2F /* SNSImageSource.h in Headers */ = {isa = PBXBuildFile; fileRef = F97096791CA2803600616E2F /* SNSImageSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F970967C1CA2803600616E2F /* SNSImageSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F970967A1CA2803600616E2F /* SNSImageSource.m */; };
+		F970967F1CA2895600616E2F /* NSDictionary+Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = F970967D1CA2895600616E2F /* NSDictionary+Helper.h */; };
+		F97096801CA2895600616E2F /* NSDictionary+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = F970967E1CA2895600616E2F /* NSDictionary+Helper.m */; };
 		F9D1427F1C96230C002ADD92 /* SNSServices.h in Headers */ = {isa = PBXBuildFile; fileRef = F9D1427E1C96230C002ADD92 /* SNSServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F9D142911C962331002ADD92 /* SNSDeviceBase.h in Headers */ = {isa = PBXBuildFile; fileRef = F9D1428E1C962331002ADD92 /* SNSDeviceBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F9D142921C962331002ADD92 /* SNSDeviceBase.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D1428F1C962331002ADD92 /* SNSDeviceBase.m */; };
@@ -24,7 +29,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0729CDB05866DEB2212E82C5 /* Pods-SNSServices.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNSServices.release.xcconfig"; path = "../Pods/Target Support Files/Pods-SNSServices/Pods-SNSServices.release.xcconfig"; sourceTree = "<group>"; };
+		85117C8E515E48F88B413182 /* libPods-SNSServices.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SNSServices.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C652B48B391561453C992F05 /* Pods-SNSServices.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNSServices.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-SNSServices/Pods-SNSServices.debug.xcconfig"; sourceTree = "<group>"; };
 		F90205D31C97AE0800D34B16 /* AuthenticationDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthenticationDelegate.h; sourceTree = "<group>"; };
+		F97096791CA2803600616E2F /* SNSImageSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSImageSource.h; sourceTree = "<group>"; };
+		F970967A1CA2803600616E2F /* SNSImageSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNSImageSource.m; sourceTree = "<group>"; };
+		F970967D1CA2895600616E2F /* NSDictionary+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Helper.h"; sourceTree = "<group>"; };
+		F970967E1CA2895600616E2F /* NSDictionary+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Helper.m"; sourceTree = "<group>"; };
 		F9D1427B1C96230C002ADD92 /* SNSServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SNSServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D1427E1C96230C002ADD92 /* SNSServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNSServices.h; sourceTree = "<group>"; };
 		F9D142801C96230C002ADD92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,17 +59,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0759205876F67D4A5E9AAD6A /* libPods-SNSServices.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CFFA4E04612C2799FD7A9F61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85117C8E515E48F88B413182 /* libPods-SNSServices.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F9D142711C96230C002ADD92 = {
 			isa = PBXGroup;
 			children = (
 				F9D1427D1C96230C002ADD92 /* SNSServices */,
 				F9D1427C1C96230C002ADD92 /* Products */,
+				FEA89CB9C46E272777773F57 /* Pods */,
+				CFFA4E04612C2799FD7A9F61 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +99,10 @@
 				F9D142D61C967B8A002ADD92 /* SNSServiceDelegate.h */,
 				F9D142A61C962800002ADD92 /* SNSServiceManager.h */,
 				F9D142A71C962800002ADD92 /* SNSServiceManager.m */,
+				F97096791CA2803600616E2F /* SNSImageSource.h */,
+				F970967A1CA2803600616E2F /* SNSImageSource.m */,
+				F970967D1CA2895600616E2F /* NSDictionary+Helper.h */,
+				F970967E1CA2895600616E2F /* NSDictionary+Helper.m */,
 				F9D142CB1C965B94002ADD92 /* SNSDevices */,
 				F9D142C61C965B3F002ADD92 /* Authentications */,
 				F9D142801C96230C002ADD92 /* Info.plist */,
@@ -107,6 +134,15 @@
 			name = SNSDevices;
 			sourceTree = "<group>";
 		};
+		FEA89CB9C46E272777773F57 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C652B48B391561453C992F05 /* Pods-SNSServices.debug.xcconfig */,
+				0729CDB05866DEB2212E82C5 /* Pods-SNSServices.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -117,6 +153,8 @@
 				F9D1427F1C96230C002ADD92 /* SNSServices.h in Headers */,
 				F9D142A81C962800002ADD92 /* SNSServiceManager.h in Headers */,
 				F9D142D71C967C0B002ADD92 /* SNSServiceDelegate.h in Headers */,
+				F970967F1CA2895600616E2F /* NSDictionary+Helper.h in Headers */,
+				F970967B1CA2803600616E2F /* SNSImageSource.h in Headers */,
 				F9D142911C962331002ADD92 /* SNSDeviceBase.h in Headers */,
 				F9D142C41C965B35002ADD92 /* SNSDeviceInstagram.h in Headers */,
 				F9D1429C1C9624EB002ADD92 /* AuthenticationWebViewController.h in Headers */,
@@ -132,10 +170,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F9D142831C96230C002ADD92 /* Build configuration list for PBXNativeTarget "SNSServices" */;
 			buildPhases = (
+				03AFA47493D900799493AEED /* Check Pods Manifest.lock */,
 				F9D142761C96230C002ADD92 /* Sources */,
 				F9D142771C96230C002ADD92 /* Frameworks */,
 				F9D142781C96230C002ADD92 /* Headers */,
 				F9D142791C96230C002ADD92 /* Resources */,
+				008D24424FF92D45E88879D3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -189,14 +229,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		008D24424FF92D45E88879D3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SNSServices/Pods-SNSServices-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		03AFA47493D900799493AEED /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F9D142761C96230C002ADD92 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F9D142CA1C965B83002ADD92 /* AuthenticationWVCInstagram.m in Sources */,
+				F970967C1CA2803600616E2F /* SNSImageSource.m in Sources */,
 				F9D1429D1C9624EB002ADD92 /* AuthenticationWebViewController.m in Sources */,
 				F9D142C51C965B35002ADD92 /* SNSDeviceInstagram.m in Sources */,
+				F97096801CA2895600616E2F /* NSDictionary+Helper.m in Sources */,
 				F9D142A91C962800002ADD92 /* SNSServiceManager.m in Sources */,
 				F9D142921C962331002ADD92 /* SNSDeviceBase.m in Sources */,
 			);
@@ -295,6 +370,7 @@
 		};
 		F9D142841C96230C002ADD92 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C652B48B391561453C992F05 /* Pods-SNSServices.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
@@ -313,6 +389,7 @@
 		};
 		F9D142851C96230C002ADD92 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0729CDB05866DEB2212E82C5 /* Pods-SNSServices.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;

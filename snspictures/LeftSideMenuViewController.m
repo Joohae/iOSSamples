@@ -7,7 +7,8 @@
 //
 
 #import "LeftSideMenuViewController.h"
-#import "SNSServices.h"
+
+#import <SNSServices/SNSServiceManager.h>
 
 #define kLeftSideMenuSNSServices @"LEFT_MENU_SNSCELL"
 #define kLeftSideMenuDefaluItems @"LEFT_MENU_DEFAULTCELL"
@@ -41,16 +42,16 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return SNSServices.numberOfServices;
+    return SNSServiceManager.numberOfServices;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell;
     
-    if (indexPath.row < SNSServices.numberOfServices) {
+    if (indexPath.row < SNSServiceManager.numberOfServices) {
         cell = [tableView dequeueReusableCellWithIdentifier:kLeftSideMenuSNSServices forIndexPath:indexPath];
         
-        NSDictionary *snsService = [SNSServices getServiceAt:indexPath.row];
+        NSDictionary *snsService = [SNSServiceManager getServiceAt:indexPath.row];
         [cell.textLabel setText:snsService[SNSServiceTitle]];
         [cell.detailTextLabel setText:snsService[SNSServiceDescription]];
         [cell.imageView setImage:[UIImage imageNamed:snsService[SNSServiceIcon]]];

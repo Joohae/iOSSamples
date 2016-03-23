@@ -7,6 +7,14 @@
 //
 
 #import "SNSDeviceInstagram.h"
+#import <AFNetworking/AFNetworking.h>
+#import "NSDictionary+Helper.h"
+
+NS_ASSUME_NONNULL_BEGIN
+
+static NSString *const INSTAGRAM_API_BASE = @"https://api.instagram.com/v1";
+static NSString *const KEY_INSTAGRAM_ACCESS_TOKEN = @"KEY_INSTAGRAM_ACCESS_TOKEN";
+#define INSTAGRAM_NUMBER_OF_ITEMS_PER_PAGE (@"2")  // 33 is the maximum numer of item limits
 
 @interface SNSDeviceInstagram ()
 {
@@ -32,7 +40,7 @@
 
 - (BOOL) hasAuthentication {
     if (!_accessToken) {
-        _accessToken = [[NSUserDefaults standardUserDefaults] stringForKey:(NSString * _Nonnull)SNS_KEY_ACCESSTOKEN];
+        _accessToken = [[NSUserDefaults standardUserDefaults] stringForKey:KEY_INSTAGRAM_ACCESS_TOKEN];
     }
     return (_accessToken != nil);
 }
@@ -41,8 +49,64 @@
     NSError *error;
     if (![self hasAuthentication]) {
         [self addAuthenticationViews];
+        return;
     }
+    
+    [self doRequestFileList:[NSMutableArray new]
+                   forMaxID:nil];
 }
+
+- (void) doRequestFileList:(NSMutableArray *)imageList
+                  forMaxID:(NSString * _Nullable)max_id {
+    NSString *urlString = [NSString stringWithFormat:@"%@/%@", INSTAGRAM_API_BASE, @"users/self/media/recent"];
+    NSURL *URL = [NSURL URLWithString:urlString];
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    NSMutableDictionary *param = [NSMutableDictionary new];
+    
+    [param setObject:_accessToken forKey:@"access_token"];
+    [param setObject:INSTAGRAM_NUMBER_OF_ITEMS_PER_PAGE forKey:@"count"];
+    if (max_id) {
+        [param setObject:max_id forKey:@"max_id"];
+    }
+
+    [manager GET:URL.absoluteString
+      parameters:param progress:nil
+         success:^(NSURLSessionTask *task, id responseObject) {
+             NSLog(@"JSON: %@", responseObject);
+             for (NSDictionary *item in responseObject[@"data"]) {
+                 SNSImageSource *imageSource = [SNSImageSource new];
+                 imageSource.text = [item objectForKeyPath:@"caption.text"];
+                 @try {
+                     imageSource.createdEpoch = [[item objectForKey:@"created_time"] integerValue];
+                 }
+                 @catch (NSException *ex){
+                     imageSource.createdEpoch = [[NSDate new] timeIntervalSince1970];
+                 }
+                 
+                 imageSource.imageUrl        = [item objectForKeyPath:@"images.standard_resolution.url"];
+                 imageSource.imageWidth      = [[item objectForKeyPath:@"images.standard_resolution.width"] doubleValue];
+                 imageSource.imageHeight     = [[item objectForKeyPath:@"images.standard_resolution.height"] doubleValue];;
+
+                 imageSource.thumbnailUrl    = [item objectForKeyPath:@"images.thumbnail.url"];
+                 imageSource.thumbnailWidth  = [[item objectForKeyPath:@"images.thumbnail.width"] doubleValue];
+                 imageSource.thumbnailHeight = [[item objectForKeyPath:@"images.thumbnail.height"] doubleValue];;
+                 
+                 [imageList addObject:imageSource];
+             }
+
+             if (![responseObject objectForKeyPath:@"pagination.next_max_id"]) {
+                 // add delegate for successful fetching
+                 NSLog(@"Response: %d", imageList.count);
+             } else {
+                 [self doRequestFileList:imageList
+                                forMaxID:[responseObject objectForKeyPath:@"pagination.next_max_id"]];
+             }
+         } failure:^(NSURLSessionTask *operation, NSError *error) {
+             NSLog(@"Error: %@", error);
+         }];
+}
+
 
 
 /// Internal Methods
@@ -78,7 +142,7 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         if (_accessToken) {
             NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-            [defaults setObject:_accessToken forKey:(NSString * _Nonnull)SNS_KEY_ACCESSTOKEN];
+            [defaults setObject:_accessToken forKey:KEY_INSTAGRAM_ACCESS_TOKEN];
             
             [self removeAuthenticationViews];
             [self.delegate SNSWebAuthenticationSuccess];
@@ -93,3 +157,4 @@
     });
 }
 @end
+NS_ASSUME_NONNULL_END

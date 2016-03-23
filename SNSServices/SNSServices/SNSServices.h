@@ -18,6 +18,7 @@ FOUNDATION_EXPORT const unsigned char SNSServicesVersionString[];
 
 #import <SNSServices/SNSServiceManager.h>
 #import <SNSServices/SNSServiceDelegate.h>
+#import <SNSServices/SNSImageSource.h>
 
 #import <SNSServices/SNSDeviceBase.h>
 #import <SNSServices/SNSDeviceInstagram.h>

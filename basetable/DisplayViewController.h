@@ -13,5 +13,6 @@
 
 // Segue parameters
 @property (strong, nonatomic) NSString *message;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end

@@ -14,8 +14,6 @@ typedef NS_ENUM(NSInteger, SNSServiceError) {
     SNSSErviceErrorUnimplemented        // Unimplemented method error
 };
 
-static const NSString *SNS_KEY_ACCESSTOKEN = @"SNS_KEY_ACCESSTOKEN";
-
 @interface SNSDeviceBase : NSObject
 
 @property (nonatomic) id<SNSServiceDelegate> delegate;
