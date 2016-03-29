@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-@interface PodsDummy_Pods_imageCache : NSObject
+@interface PodsDummy_Pods_ImageCache : NSObject
 @end
-@implementation PodsDummy_Pods_imageCache
+@implementation PodsDummy_Pods_ImageCache
 @end

@@ -5,9 +5,6 @@
       location = "group:iOSSamples.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:SNSServices/SNSServices.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:animation/uiview/animatioin.uiview/animatioin.uiview.xcodeproj">
    </FileRef>
    <FileRef

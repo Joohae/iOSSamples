@@ -5,14 +5,8 @@ platform :ios, '8.0'
 
 workspace 'iOSSamples'
 xcodeproj 'iOSSamples.xcodeproj'
-xcodeproj 'SNSServices/SNSServices.xcodeproj'
 
-target 'SNSServices' do
-    platform :ios, '8.0'
-    xcodeproj 'SNSServices/SNSServices.xcodeproj'
-
-    pod 'AFNetworking'
-end
+pod 'SNSServices', :path => '../SNSServices/'
 
 target 'basetable' do
     platform :ios, '8.0'
@@ -24,10 +18,8 @@ target 'snspictures' do
     xcodeproj 'iOSSamples.xcodeproj'
 end
 
-target 'imageCache' do
+target 'ImageCache' do
     platform :ios, '8.0'
     xcodeproj 'iOSSamples.xcodeproj'
-
-    pod 'AFNetworking'
 end
 

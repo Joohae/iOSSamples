@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "42BF6714544ADD971757B24AF6120FBCE6FEFC0E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "42BF6714544ADD971757B24AF6120FBCE6FEFC0E" : 0,
+    "64434D9E5232E6616C46AF754065FCE2D4C2D372" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F5E24FEA-188D-4720-A23B-7FB739CBEC39",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "42BF6714544ADD971757B24AF6120FBCE6FEFC0E" : "ios-samples\/",
+    "64434D9E5232E6616C46AF754065FCE2D4C2D372" : "SNSServices\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "iOSSamples",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "iOSSamples.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Joohae\/iOSSamples.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "42BF6714544ADD971757B24AF6120FBCE6FEFC0E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Joohae\/SNSServices.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "64434D9E5232E6616C46AF754065FCE2D4C2D372"
+    }
+  ]
+}
