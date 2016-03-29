@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E07B661C07AB35098B9A92DB /* libPods-imageCache.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1FA846C3C5CD508C22CB469 /* libPods-imageCache.a */; };
+		F9332D1C1CAA3CBF00A24DDF /* libImageCache.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F98749B61CAA2FBF0036EAE8 /* libImageCache.a */; };
 		F94CAE561C925184008CFF72 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F94CAE551C925184008CFF72 /* main.m */; };
 		F94CAE591C925184008CFF72 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F94CAE581C925184008CFF72 /* AppDelegate.m */; };
 		F94CAE5C1C925184008CFF72 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F94CAE5B1C925184008CFF72 /* ViewController.m */; };
@@ -28,21 +29,21 @@
 		F94CAEA21C9276D5008CFF72 /* icon-sns-picasa.png in Resources */ = {isa = PBXBuildFile; fileRef = F94CAEA01C9276D5008CFF72 /* icon-sns-picasa.png */; };
 		F94CAEA31C9276D5008CFF72 /* icon-sns-flickr.png in Resources */ = {isa = PBXBuildFile; fileRef = F94CAEA11C9276D5008CFF72 /* icon-sns-flickr.png */; };
 		F97096781CA274D400616E2F /* SNSServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97096771CA274D400616E2F /* SNSServices.framework */; };
-		F98749B91CAA2FBF0036EAE8 /* imageCache.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F98749B81CAA2FBF0036EAE8 /* imageCache.h */; };
-		F98749BB1CAA2FBF0036EAE8 /* imageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F98749BA1CAA2FBF0036EAE8 /* imageCache.m */; };
+		F98749B91CAA2FBF0036EAE8 /* ImageCache.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F98749B81CAA2FBF0036EAE8 /* ImageCache.h */; };
+		F98749BB1CAA2FBF0036EAE8 /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F98749BA1CAA2FBF0036EAE8 /* ImageCache.m */; };
 		F9876C491C94F1DC00FF70A6 /* LeftSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9876C481C94F1DC00FF70A6 /* LeftSideMenuViewController.m */; };
 		F9D142D11C9667B9002ADD92 /* SNSServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D142D01C9667B9002ADD92 /* SNSServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F9332D161CAA328900A24DDF /* PBXContainerItemProxy */ = {
+		F9332D181CAA329000A24DDF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F9C8F2CA1BC1DD2500F111BB /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F98749B51CAA2FBF0036EAE8;
 			remoteInfo = imageCache;
 		};
-		F9332D181CAA329000A24DDF /* PBXContainerItemProxy */ = {
+		F9332D1A1CAA3BC300A24DDF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F9C8F2CA1BC1DD2500F111BB /* Project object */;
 			proxyType = 1;
@@ -58,7 +59,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				F98749B91CAA2FBF0036EAE8 /* imageCache.h in CopyFiles */,
+				F98749B91CAA2FBF0036EAE8 /* ImageCache.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,9 +107,9 @@
 		F97096711CA2722A00616E2F /* SNSServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SNSServices.framework; path = "SNSServices/build/Debug-iphoneos/SNSServices.framework"; sourceTree = "<group>"; };
 		F97096751CA274B000616E2F /* SNSServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SNSServices.framework; path = "SNSServices/build/Debug-iphoneos/SNSServices.framework"; sourceTree = "<group>"; };
 		F97096771CA274D400616E2F /* SNSServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SNSServices.framework; path = "SNSServices/build/Debug-iphoneos/SNSServices.framework"; sourceTree = "<group>"; };
-		F98749B61CAA2FBF0036EAE8 /* libimageCache.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libimageCache.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		F98749B81CAA2FBF0036EAE8 /* imageCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = imageCache.h; sourceTree = "<group>"; };
-		F98749BA1CAA2FBF0036EAE8 /* imageCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = imageCache.m; sourceTree = "<group>"; };
+		F98749B61CAA2FBF0036EAE8 /* libImageCache.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libImageCache.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F98749B81CAA2FBF0036EAE8 /* ImageCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCache.h; sourceTree = "<group>"; };
+		F98749BA1CAA2FBF0036EAE8 /* ImageCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageCache.m; sourceTree = "<group>"; };
 		F9876C471C94F1DC00FF70A6 /* LeftSideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftSideMenuViewController.h; sourceTree = "<group>"; };
 		F9876C481C94F1DC00FF70A6 /* LeftSideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSideMenuViewController.m; sourceTree = "<group>"; };
 		F9D142D01C9667B9002ADD92 /* SNSServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SNSServices.framework; path = "../SNSServices/build/Debug-iphoneos/SNSServices.framework"; sourceTree = "<group>"; };
@@ -127,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9332D1C1CAA3CBF00A24DDF /* libImageCache.a in Frameworks */,
 				F9D142D11C9667B9002ADD92 /* SNSServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,12 +301,13 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
-		F98749B71CAA2FBF0036EAE8 /* imageCache */ = {
+		F98749B71CAA2FBF0036EAE8 /* ImageCache */ = {
 			isa = PBXGroup;
 			children = (
-				F98749B81CAA2FBF0036EAE8 /* imageCache.h */,
-				F98749BA1CAA2FBF0036EAE8 /* imageCache.m */,
+				F98749B81CAA2FBF0036EAE8 /* ImageCache.h */,
+				F98749BA1CAA2FBF0036EAE8 /* ImageCache.m */,
 			);
+			name = ImageCache;
 			path = imageCache;
 			sourceTree = "<group>";
 		};
@@ -314,7 +317,7 @@
 				F94CAE711C9251D4008CFF72 /* basetable */,
 				F94CAE531C925184008CFF72 /* snspictures */,
 				F94CAE911C925C9F008CFF72 /* images */,
-				F98749B71CAA2FBF0036EAE8 /* imageCache */,
+				F98749B71CAA2FBF0036EAE8 /* ImageCache */,
 				F9C8F2D31BC1DD2500F111BB /* Products */,
 				AEF87D3C58F329118CD9AD96 /* Pods */,
 				8D701D7593A232495FBFB63A /* Frameworks */,
@@ -326,7 +329,7 @@
 			children = (
 				F94CAE521C925184008CFF72 /* snspictures.app */,
 				F94CAE701C9251D4008CFF72 /* basetable.app */,
-				F98749B61CAA2FBF0036EAE8 /* libimageCache.a */,
+				F98749B61CAA2FBF0036EAE8 /* libImageCache.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -369,16 +372,16 @@
 			buildRules = (
 			);
 			dependencies = (
-				F9332D171CAA328900A24DDF /* PBXTargetDependency */,
+				F9332D1B1CAA3BC300A24DDF /* PBXTargetDependency */,
 			);
 			name = basetable;
 			productName = basetable;
 			productReference = F94CAE701C9251D4008CFF72 /* basetable.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F98749B51CAA2FBF0036EAE8 /* imageCache */ = {
+		F98749B51CAA2FBF0036EAE8 /* ImageCache */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F98749BC1CAA2FBF0036EAE8 /* Build configuration list for PBXNativeTarget "imageCache" */;
+			buildConfigurationList = F98749BC1CAA2FBF0036EAE8 /* Build configuration list for PBXNativeTarget "ImageCache" */;
 			buildPhases = (
 				1F942C37FAA2A13A4AB628E4 /* Check Pods Manifest.lock */,
 				F98749B21CAA2FBF0036EAE8 /* Sources */,
@@ -390,9 +393,9 @@
 			);
 			dependencies = (
 			);
-			name = imageCache;
+			name = ImageCache;
 			productName = imageCache;
-			productReference = F98749B61CAA2FBF0036EAE8 /* libimageCache.a */;
+			productReference = F98749B61CAA2FBF0036EAE8 /* libImageCache.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -432,7 +435,7 @@
 			targets = (
 				F94CAE511C925184008CFF72 /* snspictures */,
 				F94CAE6F1C9251D4008CFF72 /* basetable */,
-				F98749B51CAA2FBF0036EAE8 /* imageCache */,
+				F98749B51CAA2FBF0036EAE8 /* ImageCache */,
 			);
 		};
 /* End PBXProject section */
@@ -616,22 +619,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F98749BB1CAA2FBF0036EAE8 /* imageCache.m in Sources */,
+				F98749BB1CAA2FBF0036EAE8 /* ImageCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F9332D171CAA328900A24DDF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F98749B51CAA2FBF0036EAE8 /* imageCache */;
-			targetProxy = F9332D161CAA328900A24DDF /* PBXContainerItemProxy */;
-		};
 		F9332D191CAA329000A24DDF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F98749B51CAA2FBF0036EAE8 /* imageCache */;
+			target = F98749B51CAA2FBF0036EAE8 /* ImageCache */;
 			targetProxy = F9332D181CAA329000A24DDF /* PBXContainerItemProxy */;
+		};
+		F9332D1B1CAA3BC300A24DDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F98749B51CAA2FBF0036EAE8 /* ImageCache */;
+			targetProxy = F9332D1A1CAA3BC300A24DDF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -888,7 +891,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F98749BC1CAA2FBF0036EAE8 /* Build configuration list for PBXNativeTarget "imageCache" */ = {
+		F98749BC1CAA2FBF0036EAE8 /* Build configuration list for PBXNativeTarget "ImageCache" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F98749BD1CAA2FBF0036EAE8 /* Debug */,

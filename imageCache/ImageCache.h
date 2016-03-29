@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface imageCache : NSObject
+@interface ImageCache : NSObject
+
++(ImageCache *) shareManager;
 
 @end
