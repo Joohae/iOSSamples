@@ -30,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		0729CDB05866DEB2212E82C5 /* Pods-SNSServices.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNSServices.release.xcconfig"; path = "../Pods/Target Support Files/Pods-SNSServices/Pods-SNSServices.release.xcconfig"; sourceTree = "<group>"; };
+		0A3E93C43EFF6828E5E39C9E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		85117C8E515E48F88B413182 /* libPods-SNSServices.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SNSServices.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C652B48B391561453C992F05 /* Pods-SNSServices.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNSServices.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-SNSServices/Pods-SNSServices.debug.xcconfig"; sourceTree = "<group>"; };
 		F90205D31C97AE0800D34B16 /* AuthenticationDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthenticationDelegate.h; sourceTree = "<group>"; };
@@ -70,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				85117C8E515E48F88B413182 /* libPods-SNSServices.a */,
+				0A3E93C43EFF6828E5E39C9E /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

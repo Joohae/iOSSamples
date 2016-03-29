@@ -14,13 +14,20 @@ target 'SNSServices' do
     pod 'AFNetworking'
 end
 
+target 'basetable' do
+    platform :ios, '8.0'
+    xcodeproj 'iOSSamples.xcodeproj'
+end
+
 target 'snspictures' do
     platform :ios, '8.0'
     xcodeproj 'iOSSamples.xcodeproj'
 end
 
-target 'basetable' do
+target 'imageCache' do
     platform :ios, '8.0'
     xcodeproj 'iOSSamples.xcodeproj'
+
+    pod 'AFNetworking'
 end
 
